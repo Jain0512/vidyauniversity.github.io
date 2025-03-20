@@ -1,0 +1,35 @@
+.main{
+    width: 1350px;
+    height: 650px;
+    background-image: url('vidya university.jpg');   
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+.col1{
+    float: left;
+    width: 1150px;
+    height: 600px;
+}
+.col2{
+    float: left;
+    width: 100px;
+    height: 600px;
+}
+.col3{
+    float: left;
+    height: 600px;
+    width: 100px;
+}
+.row2{
+    text-align: center;
+    
+}
+.col1:hover{
+    color:rgb(26, 15, 182);
+}
+a:hover{
+    color:rgb(57, 13, 179);
+}
+a{
+    color: black;
+}
