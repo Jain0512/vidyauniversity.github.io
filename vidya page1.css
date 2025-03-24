@@ -1,29 +1,49 @@
-.main{
-    width: 1350px;
-    height: 650px;
+/* Make the main container responsive */
+.main {
+    width: 100%;
+    max-width: 1350px;
+    height: 100vh; /* Fullscreen height */
     background-image: url('vidya university.jpg');   
-    background-repeat: no-repeat ;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure full coverage */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Maintain structure */
 }
-.col1{
-    float: left;
-    width: 1150px;
-    height: 600px;
+
+/* Row 1: Logo (Left) + Links (Right) */
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Move items to the top */
+    padding: 5px 20px; /* Reduce top padding to move up */
 }
-.col2{
-    float: left;
-    width: 100px;
-    height: 600px;
+
+/* Logo (Upper Left Corner - Moved Up) */
+.col1 img {
+    max-width: 100px;
+    height: auto;
+    margin-top: -5px; /* Move logo slightly up */
+    margin-left: -10px;
 }
-.col3{
-    float: left;
-    height: 600px;
-    width: 100px;
-}
-.row2{
-    text-align: center;
+
+/* Language Links (Move Up) */
+.col2 {
     
+    margin-top: -8px; /* Move links slightly up */
 }
+.col3 {
+    
+    margin-top: -4px; /* Move links slightly up */
+}
+/* Flexbox for Right Side (col2 + col3) */
+.lang-container {
+    display: flex;
+    align-items: flex-start; /* Align links to the top */
+    gap: 200px;
+}
+
 .col1:hover{
     color:rgb(26, 15, 182);
 }
@@ -32,4 +52,25 @@ a:hover{
 }
 a{
     color: black;
+}
+/* Make layout responsive on smaller screens */
+@media screen and (max-width: 768px) {
+    .row1 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .col1 {
+        width: auto;
+    }
+
+    .col2, .col3 {
+        width: auto;
+        margin: 5px;
+    }
+
+    .main {
+        height: auto;
+        min-height: 100vh;
+    }
 }
